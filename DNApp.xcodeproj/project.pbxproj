@@ -42,6 +42,8 @@
 		964E76B61AAB6B7C00B5BB89 /* TransitionZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E76991AAB6B7C00B5BB89 /* TransitionZoom.swift */; };
 		964E76B71AAB6B7C00B5BB89 /* UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E769A1AAB6B7C00B5BB89 /* UnwindSegue.swift */; };
 		964E76B91AAB6EBD00B5BB89 /* CommentsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964E76B81AAB6EBD00B5BB89 /* CommentsTableViewController.swift */; };
+		966961C31AAC42950086AF50 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966961C21AAC42950086AF50 /* SwiftyJSON.swift */; };
+		966961C51AAC4AB40086AF50 /* CommentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 966961C41AAC4AB40086AF50 /* CommentTableViewCell.swift */; };
 		96B71EBE1A7505D300545869 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B71EBD1A7505D300545869 /* AppDelegate.swift */; };
 		96B71EC11A7505D300545869 /* DNApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 96B71EBF1A7505D300545869 /* DNApp.xcdatamodeld */; };
 		96B71EC61A7505D300545869 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96B71EC41A7505D300545869 /* Main.storyboard */; };
@@ -99,6 +101,8 @@
 		964E76991AAB6B7C00B5BB89 /* TransitionZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransitionZoom.swift; sourceTree = "<group>"; };
 		964E769A1AAB6B7C00B5BB89 /* UnwindSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnwindSegue.swift; sourceTree = "<group>"; };
 		964E76B81AAB6EBD00B5BB89 /* CommentsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentsTableViewController.swift; sourceTree = "<group>"; };
+		966961C21AAC42950086AF50 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		966961C41AAC4AB40086AF50 /* CommentTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentTableViewCell.swift; sourceTree = "<group>"; };
 		96B71EB81A7505D300545869 /* DNApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DNApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96B71EBC1A7505D300545869 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		96B71EBD1A7505D300545869 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -190,10 +194,12 @@
 			isa = PBXGroup;
 			children = (
 				964E767C1AAB6B7C00B5BB89 /* Spring */,
+				966961C21AAC42950086AF50 /* SwiftyJSON.swift */,
 				96B71EBD1A7505D300545869 /* AppDelegate.swift */,
 				963102A81AAB18DE00B09942 /* StoriesTableViewController.swift */,
 				963102AF1AAB323600B09942 /* StoryTableViewCell.swift */,
 				964E76B81AAB6EBD00B5BB89 /* CommentsTableViewController.swift */,
+				966961C41AAC4AB40086AF50 /* CommentTableViewCell.swift */,
 				96FCEE761A7A93240092ED67 /* LoginViewController.swift */,
 				963102AA1AAB2A2F00B09942 /* MenuViewController.swift */,
 				963102AC1AAB2B0600B09942 /* WebViewController.swift */,
@@ -342,6 +348,7 @@
 				964E76A31AAB6B7C00B5BB89 /* DesignableTextField.swift in Sources */,
 				964E76A41AAB6B7C00B5BB89 /* DesignableTextView.swift in Sources */,
 				964E76B61AAB6B7C00B5BB89 /* TransitionZoom.swift in Sources */,
+				966961C31AAC42950086AF50 /* SwiftyJSON.swift in Sources */,
 				964E76B21AAB6B7C00B5BB89 /* SpringTextField.swift in Sources */,
 				964E76A01AAB6B7C00B5BB89 /* DesignableImageView.swift in Sources */,
 				963102AB1AAB2A2F00B09942 /* MenuViewController.swift in Sources */,
@@ -368,6 +375,7 @@
 				963102B01AAB323600B09942 /* StoryTableViewCell.swift in Sources */,
 				963102A91AAB18DE00B09942 /* StoriesTableViewController.swift in Sources */,
 				964E76A11AAB6B7C00B5BB89 /* DesignableLabel.swift in Sources */,
+				966961C51AAC4AB40086AF50 /* CommentTableViewCell.swift in Sources */,
 				964E76AE1AAB6B7C00B5BB89 /* SpringAnimation.swift in Sources */,
 				963102AD1AAB2B0600B09942 /* WebViewController.swift in Sources */,
 				964E76A91AAB6B7C00B5BB89 /* LoadingView.swift in Sources */,

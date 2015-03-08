@@ -138,7 +138,7 @@
                     <connections>
                         <segue destination="aev-hv-oIC" kind="presentation" identifier="LoginSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="RZ6-4V-MNk"/>
                         <segue destination="LAb-dg-WqN" kind="presentation" identifier="MenuSegue" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="LfR-xU-qce"/>
-                        <segue destination="wXN-jd-aFz" kind="presentation" identifier="WebSegue" modalPresentationStyle="overCurrentContext" id="WJh-J8-9mM"/>
+                        <segue destination="wXN-jd-aFz" kind="presentation" identifier="WebSegue" id="WJh-J8-9mM"/>
                         <segue destination="gVs-cn-LrJ" kind="show" identifier="CommentsSegue" id="GBC-ab-6PE"/>
                     </connections>
                 </tableViewController>
@@ -493,6 +493,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="twitterButtonDidTouch:" destination="s6i-mT-cSt" eventType="touchUpInside" id="byh-1g-reQ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.19607843137254902" green="0.23529411764705882" blue="0.28235294117647058" alpha="1" colorSpace="calibratedRGB"/>
@@ -549,7 +552,7 @@
                         <subviews>
                             <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Nb-iJ-HpV">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ID0-am-G6T" customClass="DesignableButton" customModule="DNApp" customModuleProvider="target">
                                 <rect key="frame" x="20" y="504" width="44" height="44"/>
@@ -590,10 +593,15 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9fA-yJ-g8A">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="2.5"/>
+                                <color key="progressTintColor" red="0.21568627450980393" green="0.72941176470588232" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4Nb-iJ-HpV" firstAttribute="top" secondItem="OF9-fO-XEM" secondAttribute="top" id="00Q-7S-Ry1"/>
+                            <constraint firstAttribute="trailing" secondItem="9fA-yJ-g8A" secondAttribute="trailing" id="4OH-04-gZV"/>
                             <constraint firstItem="M5O-LS-fPz" firstAttribute="width" secondItem="ID0-am-G6T" secondAttribute="width" id="AJG-4F-6Tc"/>
                             <constraint firstItem="ID0-am-G6T" firstAttribute="leading" secondItem="OF9-fO-XEM" secondAttribute="leading" constant="20" id="COv-06-rJo"/>
                             <constraint firstItem="4Nb-iJ-HpV" firstAttribute="leading" secondItem="OF9-fO-XEM" secondAttribute="leading" id="I1U-c5-OuE"/>
@@ -601,10 +609,16 @@
                             <constraint firstItem="M5O-LS-fPz" firstAttribute="height" secondItem="ID0-am-G6T" secondAttribute="height" id="Yx0-Pv-71v"/>
                             <constraint firstItem="M5O-LS-fPz" firstAttribute="leading" secondItem="ID0-am-G6T" secondAttribute="trailing" constant="20" id="aDA-8v-d8e"/>
                             <constraint firstItem="Evm-BY-HyH" firstAttribute="top" secondItem="ID0-am-G6T" secondAttribute="bottom" constant="20" id="aaH-Tb-Dsj"/>
+                            <constraint firstItem="9fA-yJ-g8A" firstAttribute="top" secondItem="OF9-fO-XEM" secondAttribute="top" id="faO-5Q-PTF"/>
                             <constraint firstAttribute="trailing" secondItem="4Nb-iJ-HpV" secondAttribute="trailing" id="iJm-eB-NIe"/>
                             <constraint firstItem="M5O-LS-fPz" firstAttribute="centerY" secondItem="ID0-am-G6T" secondAttribute="centerY" id="in6-pf-O1L"/>
+                            <constraint firstItem="9fA-yJ-g8A" firstAttribute="leading" secondItem="OF9-fO-XEM" secondAttribute="leading" id="lZS-hU-lUy"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressView" destination="9fA-yJ-g8A" id="uoo-LM-1iF"/>
+                        <outlet property="webView" destination="4Nb-iJ-HpV" id="Xyg-du-hhP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmm-8h-h0d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

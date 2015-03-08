@@ -8,9 +8,13 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var dialogView: DesignableView!
+    @IBOutlet weak var emailImageView: SpringImageView!
+    @IBOutlet weak var passwordImageView: SpringImageView!
+    @IBOutlet weak var emailTextField: DesignableTextField!
+    @IBOutlet weak var passwordTextField: DesignableTextField!
     
     @IBAction func closeButtonDidTouch(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -24,7 +28,43 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do something
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+        view.endEditing(true)
+    }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if textField == emailTextField {
+            emailImageView.image = UIImage(named: "icon-mail-active")
+            emailImageView.animate()
+        } else {
+            emailImageView.image = UIImage(named: "icon-mail")
+        }
+        
+        if textField == passwordTextField {
+            passwordImageView.image = UIImage(named: "icon-password-active")
+            passwordImageView.animate()
+        } else {
+            passwordImageView.image = UIImage(named: "icon-password")
+        }
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        emailImageView.image = UIImage(named: "icon-mail")
+        passwordImageView.image = UIImage(named: "icon-password")
     }
     
 }
+
+
+
+
+
+
+
+
+
+

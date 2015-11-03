@@ -16,6 +16,9 @@ class CommentsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableView.estimatedRowHeight = 140
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
         comments = story["comments"]
     }
     
@@ -27,7 +30,7 @@ class CommentsTableViewController: UITableViewController {
         
         let identifer = indexPath.row == 0 ? "StoryCell" : "CommentCell"
         
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifer) as UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier(identifer) as UITableViewCell!
         
         if let storyCell = cell as? StoryTableViewCell {
             storyCell.configureWithStory(story)

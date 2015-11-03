@@ -23,16 +23,16 @@
 import UIKit
 import AudioToolbox
 
-public class SoundPlayer: NSObject {
+struct SoundPlayer {
 
-    @IBInspectable var filename : String?
-    @IBInspectable var enabled : Bool = true
+    static var filename : String?
+    static var enabled : Bool = true
 
     private struct Internal {
         static var cache = [NSURL:SystemSoundID]()
     }
 
-    public func playSound(soundFile:String) {
+    static func playSound(soundFile: String) {
 
         if !enabled {
             return
@@ -50,13 +50,11 @@ public class SoundPlayer: NSObject {
             AudioServicesPlaySystemSound(soundID)
 
         } else {
-            println("Could not find sound file name `\(soundFile)`")
+            print("Could not find sound file name `\(soundFile)`")
         }
     }
 
-    @IBAction public func play(sender: AnyObject?) {
-        if let filename = filename {
-            self.playSound(filename)
-        }
+    static func play(file: String) {
+        self.playSound(file)
     }
 }
